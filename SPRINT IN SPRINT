@@ -1,0 +1,149 @@
+START:7 instradd:program instr
+      3 CHECK instr:0
+CHECK:4 instr zero PUT
+      4 instr one ADD
+      4 instr two ADD
+      4 instr three JUMP
+      4 instr four JUMPIF=
+      4 instr five JUMPIF=
+      4 instr six READ
+      4 instr seven COPY
+      4 instr eight MULTIPLY
+      4 instr nine HALT
+
+7 instr unknown_instr
+3 unknown_instr
+
+PUT:1 one instradd value
+    7 value:0 value_to_put
+    1 instradd two where_to_put
+    7 where_to_put wtp
+    1 eof wtp:0 where_to_put
+    0 value_to_put:0 
+      where_to_put:0
+    1 three instradd instradd
+    3 START
+
+ADD:1 one instradd lhs
+    7 lhs l_h_s
+    1 eof l_h_s:0 lhs
+    1 two instradd rhs
+    7 rhs r_h_s
+    1 eof r_h_s:0 rhs 
+    1 three instradd 
+      where_to_store
+    7 where_to_store wts
+    1 eof wts:0 where_to_store
+
+4 instr two SUBTRACT
+    1 lhs:0 rhs:0 
+      where_to_store:0
+N:1 four instradd instradd
+  3 START
+
+SUBTRACT:7 lhs lhs_
+         7 rhs rhs_
+         7 where_to_store 
+           where_to_store_
+         2 lhs_:0 rhs_:0 
+           where_to_store_:0
+         3 N
+
+JUMP:1 one instradd jspec_cell
+     1 jspec_cell:0 eof 
+       instradd
+     3 START
+
+JUMPIF=:1 one instradd temp
+        7 temp:0 what_to_check
+        1 eof what_to_check 
+          what_to_check
+        1 two instradd temp1
+        7 temp1:0 
+          what_to_checkvth
+        1 eof what_to_checkvth 
+          what_to_checkvth
+
+4 instr five JUMPIF<
+        4 what_to_check:0 
+        what_to_checkvth:0 T
+   F:1 four instradd instradd
+     3 START
+   T:1 three instradd instradd
+     7 instradd next1
+     1 eof next1:0 instradd
+     3 START
+
+JUMPIF<:7 what_to_check less
+        7 what_to_checkvth big
+        5 less:0 big:0 T
+        3 F
+
+READ:1 one instradd storecell
+     7 storecell store_cell
+     1 eof store_cell:0 
+       storecell
+     6 storecell:0
+     1 two instradd instradd
+     3 START
+
+COPY:1 one instradd 
+       what_to_be_copied
+     7 what_to_be_copied wtbc
+     1 eof wtbc:0 
+       what_to_be_copied
+     1 two instradd 
+       where_to_be_copied
+     7 where_to_be_copied wtb
+     1 eof wtb:0 
+       where_to_be_copied
+     7 what_to_be_copied:0 
+       where_to_be_copied:0
+     1 three instradd instradd
+     3 START
+
+MULTIPLY:1 one instradd 
+           multiplicand
+         7 multiplicand 
+           multiplic
+         1 eof multiplic:0 
+           multiplicand
+         1 two instradd 
+           multiplier
+         7 multiplier multipli
+         1 eof multipli:0 
+           multiplier
+         1 three instradd 
+           product
+         7 product prod
+         1 eof prod:0 product
+         7 multiplier:0 flag
+     mul:4 flag zero end
+         1 multiplicand:0 
+           produc produc
+         2 flag one flag
+         3 mul
+    flag:0
+    produc:0
+     end:7 produc product:0
+         1 four instradd 
+           instradd
+         3 START
+
+HALT:9
+
+unknown_instr:0
+zero:0
+one:1
+two:2
+three:3
+four:4
+five:5
+six:6
+seven:7
+eight:8
+nine:9
+
+eof:335
+
+program:8 1 2 4 9
