@@ -1,0 +1,28 @@
+3 7 
+seq_location:seq
+seq_length:2
+cycle_location:100
+cycle_length:8
+4 seq_length zero halt
+7 seq_location seq_start
+7 cycle_location cycle_start
+7 seq_length slength
+7 cycle_length clength
+loop:4 clength zero halt
+7 seq_start:0 cycle_start:0
+2 slength one slength
+2 clength one clength
+4 slength zero update
+1 one seq_start seq_start
+yes:1 one cycle_start cycle_start
+3 loop
+update:7 seq_location seq_start
+7 seq_length slength
+3 yes
+
+halt:9
+zero:0
+one:1
+slength:0
+clength:0
+seq:1 2 3
