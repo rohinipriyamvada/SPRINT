@@ -1,0 +1,42 @@
+3 5 
+first_element_location:list
+length:11
+
+5 length two halt
+
+7 length lcopy
+loop:2 lcopy one no_of_checks
+7 first_element_location checkele1
+1 one first_element_location
+checkele2
+
+CHECK:5 checkele2:0 checkele1:0 SWAP
+move:2 no_of_checks one no_of_checks
+4 no_of_checks zero NEXT
+
+7 checkele2 checkele1
+1 one checkele2 checkele2
+3 CHECK 
+
+SWAP:7 checkele1 x
+7 checkele1 x1
+7 checkele2 y
+7 checkele2 y1
+7 x:0 temp
+7 y:0 x1:0
+7 temp y1:0
+3 move
+
+NEXT:2 lcopy one lcopy
+4 lcopy one halt
+3 loop
+
+halt:9
+zero:0
+one:1
+two:2
+lcopy:0
+temp:0
+no_of_checks:0
+
+list:1 4 7 9 0 6 5 3 9 0 2
