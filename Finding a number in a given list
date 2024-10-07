@@ -1,0 +1,29 @@
+3 start
+first_element:56
+length:1
+target:55
+result:0
+
+start:7 length lengthcopy
+
+7 first_element ele_address
+
+chk:4 lengthcopy zero halt
+4 ele_address:0 target ADD
+1 one ele_address ele_address
+2 lengthcopy one lengthcopy
+3 chk 
+
+ADD:1 one result result
+
+halt:9
+lengthcopy:0
+zero:0
+one:1
+0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+e1:1 20 4 55 0
+0
+0
+56
+0
