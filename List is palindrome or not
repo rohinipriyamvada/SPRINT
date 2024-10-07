@@ -1,0 +1,40 @@
+3 start
+first_element_location:list
+length:5
+result:0
+start:5 length two ADD2
+7 length rem
+div:2 rem two rem
+1 one no_of_checks no_of_checks
+5 rem two assign
+3 div
+
+assign:7 first_element_location lhs
+1 first_element_location length rhs 
+2 rhs one rhs
+
+loop:4 lhs:0 rhs:0 dec
+3 ADD1
+
+dec:2 no_of_checks one no_of_checks
+
+4 no_of_checks zero ADD2
+
+1 one lhs lhs
+2 rhs one rhs
+3 loop
+
+ADD1:1 one result result
+3 halt
+ADD2:1 two result result
+halt:9
+
+zero:0
+one:1
+two:2
+no_of_checks:0
+rem:0
+
+0 0 0
+
+list:1 2 3 2 1 
