@@ -1,0 +1,23 @@
+3 start
+number:100
+result:0
+
+start:7 number rem
+loop:5 rem ten ADD
+2 rem ten rem
+1 quotient one quotient
+5 rem ten YES
+3 loop
+YES:1 result rem result
+4 quotient zero halt
+7 quotient rem
+7 zero quotient
+3 loop 
+
+ADD:1 rem result result
+halt:9
+zero:0
+one:1
+ten:10
+rem:0
+quotient:0
