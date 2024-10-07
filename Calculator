@@ -1,0 +1,58 @@
+calculator:3 4 0 
+6 12 
+6 13 
+6 14 
+3 CHECK 
+op1:0
+op2:0
+operation:0
+operations:0
+ADD
+SUB
+MUL
+DIV
+MAX
+MIN
+
+CHECK:1 location operation location
+      7 location:operations x
+      3 x:0
+
+halt:9
+
+ADD:1 op1 op2 3 9
+
+SUB:2 op1 op2 3 9
+
+MUL:7 op2 temp
+ GO:4 temp zero halt
+    1 op1 3 3
+    2 temp one temp
+    3 GO
+    temp:0
+
+DIV:7 op1 rem
+    4 rem zero halt
+ go:5 rem op2 halt
+    2 rem op2 rem
+    1 one 3 3
+    3 go
+    rem:0    
+
+zero:0
+one:1
+two:2
+eight:8
+ten:10
+
+MAX:7 op1 3
+    5 op1 op2 op2_greater
+    9
+    op2_greater:7 op2 3
+    9
+
+MIN:7 op1 3
+    5 op2 op1 op2_lesser
+    9
+    op2_lesser:7 op2 3
+    9
