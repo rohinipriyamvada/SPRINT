@@ -1,0 +1,19 @@
+3 5 
+1 1 
+4 3 zero halt
+4 3 count halt
+1 13 count count
+7 count incount 
+4 incount zero 34
+1 temp 4 temp
+2 incount 13 incount
+3 20
+7 temp 4
+7 zero temp 
+3 9
+
+halt:9
+count:1
+temp:0
+incount:0
+zero:0a
