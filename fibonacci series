@@ -1,0 +1,18 @@
+3 5 first_element_location:100
+n:8
+7 first_element_location fib_cur
+7 n length
+check:5 length one HALT
+7 secondlast fib_cur:0
+1 last secondlast last
+2 last secondlast secondlast
+1 fib_cur one fib_cur
+2 length one length
+3 check
+
+HALT:9
+one:1
+zero:0
+length:0
+secondlast:0
+last:1
