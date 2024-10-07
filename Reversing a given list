@@ -1,0 +1,45 @@
+3 start
+first_element_location:100
+length:5
+
+start:5 length two halt
+7 length copy
+div:2 copy two copy
+1 one swap swap
+5 copy two assign
+3 div
+
+assign:7 first_element_location cur_ele
+1 first_element_location length last_ele 
+2 last_ele one last_ele
+
+loop:7 cur_ele x
+7 cur_ele x1
+7 last_ele y
+7 last_ele y1
+7 x:0 temp
+7 y:0 x1:0
+7 temp y1:0
+
+2 swap one swap
+
+4 swap zero halt
+
+1 one cur_ele cur_ele
+2 last_ele one last_ele
+3 loop
+
+halt:9
+zero:0
+one:1
+two:2
+copy:0
+swap:0
+cur_ele:0
+last_ele:0
+temp:0
+
+
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+list:1 2 3 4 5 0 0 0 0
