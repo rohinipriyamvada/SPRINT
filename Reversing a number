@@ -1,0 +1,33 @@
+3 start
+number:123 reversed:0
+start:5 number ten YES
+7 number rem
+
+chk:4 rem zero halt
+5 rem ten YES2
+2 rem ten rem
+1 one quotient quotient
+3 chk
+
+YES:7 number reversed
+3 halt
+YES2:7 reversed temp
+7 zero reversed
+move:1 temp reversed reversed
+1 one count count
+4 count ten YES3
+3 move
+YES3:1 rem reversed reversed
+7 quotient rem
+7 zero quotient
+7 zero count
+3 chk
+
+halt:9
+rem:0
+quotient:0
+temp:0
+count:0
+ten:10
+zero:0
+one:1
